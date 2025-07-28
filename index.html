@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Flowers</title>
+</head>
+
+<body>
+    <div class="greetings">
+    <span>H</span>
+    <span>a</span>
+    <span>p</span>
+    <span>p</span>
+    <span>y</span>
+    <br>
+    <!-- espacio -->
+    <span style="width: 20px; display:inline-block;"></span>
+    <span>B</span>
+    <span>i</span>
+    <span>r</span>
+    <span>t</span>
+    <span>h</span>
+    <span>d</span>
+    <span>a</span>
+    <span>y</span>
+    <span></span>
+    </div>
+    <div class="description">
+        <span>This detail is for you, I hope you enjoy it.</span>
+    </div>
+    <div class="button">
+    <a href="flower.html" class="botones">touch here</a>
+</div>
+
+<script>
+    // Crear flores animadas dinámicamente
+    const flowerCount = 30;
+    for (let i = 0; i < flowerCount; i++) {
+        const flower = document.createElement("div");
+        flower.classList.add("flower");
+        flower.innerText = "🌸";
+        flower.style.left = Math.random() * 100 + "vw";
+        flower.style.animationDuration = (5 + Math.random() * 5) + "s";
+        flower.style.fontSize = (0.8 + Math.random() * 1.2) + "rem";
+        document.body.appendChild(flower);
+    }
+</script>
+</body>
+
+</html>
